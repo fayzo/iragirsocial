@@ -52,7 +52,7 @@ class Posts_home extends Gurisha {
                     </div>
 
                     <span class="username">
-                        <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['firstname']." ".$user['lastname'] ;?></a>
+                        <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['username'] ;?></a>
                         <!-- //Jonathan Burke Jr. -->
                         <span class="description">Shared public - <?php echo $this->timeAgo($retweet['posted_on']); ?></span>
                     </span>
@@ -130,7 +130,7 @@ class Posts_home extends Gurisha {
                                                </div>
                                                </div>
                                               <span class="username">
-                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                   <!-- //Jonathan Burke Jr. -->
                                               </span>
                                                 <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -197,7 +197,7 @@ class Posts_home extends Gurisha {
                                                 </div>
                                                 </div>
                                                 <span class="username">
-                                                    <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                    <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                     <!-- //Jonathan Burke Jr. -->
                                                 </span>
                                                 <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -262,7 +262,7 @@ class Posts_home extends Gurisha {
                                                 </div>
                                                 </div>
                                                 <span class="username">
-                                                    <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                    <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                     <!-- //Jonathan Burke Jr. -->
                                                 </span>
                                                 <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -318,7 +318,7 @@ class Posts_home extends Gurisha {
                                                </div>
                                                </div>
                                               <span class="username">
-                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                   <!-- //Jonathan Burke Jr. -->
                                               </span>
                                                 <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -370,7 +370,7 @@ class Posts_home extends Gurisha {
                                                </div>
                                                </div>
                                               <span class="username">
-                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                   <!-- //Jonathan Burke Jr. -->
                                               </span>
                                                 <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -422,7 +422,7 @@ class Posts_home extends Gurisha {
                                                </div>
                                                </div>
                                               <span class="username">
-                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                 <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                   <!-- //Jonathan Burke Jr. -->
                                               </span>
                                                 <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -471,7 +471,7 @@ class Posts_home extends Gurisha {
                                                </div>
                                                </div>
                                                <span class="username">
-                                                   <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                   <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                    <!-- //Jonathan Burke Jr. -->
                                                    <span class="description">Shared publicly - <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
                                                </span>
@@ -502,12 +502,12 @@ class Posts_home extends Gurisha {
 
                        <?php if($user_id != $tweet['user_id']) { ?> 
                             <ul><li>
-                                <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>" ><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>" ><?php echo $tweet['username'] ;?></a>
                                 <ul><li><?php echo Follow::tooltipProfile($tweet['user_id'],$user_id,$tweet['user_id']); ?></li></ul>
                                 </li>
                             </ul>
                             <?php }else{ ?>
-                                <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>" ><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>" ><?php echo $tweet['username'] ;?></a>
                             <?php } ?> 
 
                     </span>
@@ -1022,39 +1022,39 @@ class Posts_home extends Gurisha {
 
           <ul class="mt-2 list-inline" style="list-style-type: none; margin-bottom:10px;">  
                     <?php if($tweet['tweet_id'] == $retweet['retweet_id']){ ?>
-                     <li class=" list-inline-item"><button class="share-btn retweeted text-sm mr-2" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                     <li class=" list-inline-item"><button <?php echo (isset($_SESSION['key']))?'class="share-btn retweeted text-sm mr-2"':'class=" text-sm mr-2" id="login-please" data-login="1"' ;?>  data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                      <i class="fa fa-share green mr-1" style="color: green"> <span class="retweetcounter"><?php echo $retweet["retweet_counts"];?></span></i>
                         Share</button></li>
                     <?php }else{ ?>
 
-                           <li  class=" list-inline-item"> <button class="share-btn retweet text-sm mr-2" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                           <li  class=" list-inline-item"> <button <?php echo (isset($_SESSION['key']))?'class="share-btn retweet text-sm mr-2"':'class=" text-sm mr-2" id="login-please" data-login="1"' ;?>   data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                             <?php if($retweet["retweet_counts"] > 0){ echo '<i class="fa fa-share mr-1" style="color: green"> <span class="retweetcounter">'.$retweet["retweet_counts"].'</span></i>' ; }else{ echo '<i class="fa fa-share mr-1"> <span class="retweetcounter">'.$retweet["retweet_counts"].'</span></i>';} ?>
                                Share</button></li>
 
                      <?php } ?>
                         <?php if($likes['like_on'] == $tweet['tweet_id']){ ?>
-                            <li  class=" list-inline-item"><button class="unlike-btn text-sm" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                            <li  class=" list-inline-item"><button <?php echo (isset($_SESSION['key']))?'class="unlike-btn text-sm"':'class="text-sm" id="login-please" data-login="1"' ;?> data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                             <i class="fa fa-thumbs-up mr-1" style="color: red"> <span class="likescounter"><?php echo $tweet['likes_counts'] ;?></span></i>
                                 Like</button></li>
 
                         <?php }else{ ?>
-                              <li  class=" list-inline-item"> <button class="like-btn text-sm" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                              <li  class=" list-inline-item"> <button <?php echo (isset($_SESSION['key']))?'class="like-btn text-sm"':'class="text-sm" id="login-please" data-login="1"' ;?>  data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                                <i class="fa fa-thumbs-o-up mr-1"> <span class="likescounter"><?php if ($tweet['likes_counts'] > 0){ echo $tweet['likes_counts'];}else{ echo '';} ?></span></i>
                                    Like</button></li>
                         <?php } ?>
                     
                      <span style="float:right">
                 
-                      <li  class=" list-inline-item"><button class="comments-btn text-sm" data-target="#a<?php echo  $tweet["tweet_id"];?>" data-toggle="collapse">
+                      <li  class=" list-inline-item"><button <?php echo (isset($_SESSION['key']))?'class="comments-btn text-sm" data-toggle="collapse"':'class="text-sm" id="login-please" data-login="1"' ;?> data-target="#a<?php echo  $tweet["tweet_id"];?>" >
                           <i class="fa fa-comments-o mr-1"></i> Comments (<?php echo $this->CountsComment($tweet["tweet_id"]); ?>)
                       </button></li>
                     
 
-                     <?php if ($tweet["tweetBy"] == $user_id){ ?>
+                     <?php if (isset($_SESSION['key']) && $tweet["tweetBy"] == $user_id){ ?>
                         <li  class=" list-inline-item">
-                            <ul class="deleteButt" style="list-style-type: none; margin:0px;" >
+                            <ul class="deleteButt text-sm" style="list-style-type: none; margin:0px;" >
                                 <li>
-                                   <a href="javascript:void(0)" class="more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                   <a href="javascript:void(0)" class="more" ><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
                                     <ul style="list-style-type: none; margin:0px;" >
                                         <li style="list-style-type: none; margin:0px;"> 
                                             <label class="deleteTweet" data-tweet="<?php echo  $tweet["tweet_id"];?>"  data-user="<?php echo $tweet["tweetBy"];?>" >Delete </label>
@@ -1072,7 +1072,7 @@ class Posts_home extends Gurisha {
                     name="comment"  placeholder="Reply to  <?php echo $tweet['username'] ;?>" >
                 <div class="input-group-append">
                     <span class="input-group-text btn" style="padding: 0px 10px;" 
-                        aria-label="Username" aria-describedby="basic-addon1" id="post_HomeComment"  data-tweet="<?php echo $tweet['tweet_id'];?>">
+                        aria-label="Username" aria-describedby="basic-addon1" <?php echo (isset($_SESSION['key']))?'id="post_HomeComment"':'id="login-please" data-login="1"' ;?>  data-tweet="<?php echo $tweet['tweet_id'];?>">
                         <span class="fa fa-arrow-right text-muted" ></span>
                     </span>
                 </div>

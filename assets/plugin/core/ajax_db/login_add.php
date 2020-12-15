@@ -83,6 +83,8 @@ if(isset($_POST['key'])){
                     </button>
                     <strong>Password Must eqaul to verification</strong> </div>');
     }else {
+        
+        require '../../signup_for_thank.php';
 
       $users->alreadyUseEmail('users',array(
            'username' => $username, 
@@ -122,7 +124,7 @@ if (isset($_REQUEST['login_id']) && !empty($_REQUEST['login_id'])) {
         <div class="img-popup-wrapLogin"  id="popupEnd">
         	<div class="img-popup-body">
                   
-            <div class='body-center0  clear-float d-none d-md-block'>
+            <!-- <div class='body-center0  clear-float d-none d-md-block'>
                 <div class="containers container" id="container">
                     <div class="form-container sign-up-container">
                         <form action="post">
@@ -159,7 +161,6 @@ if (isset($_REQUEST['login_id']) && !empty($_REQUEST['login_id'])) {
                                 <input type="date" class="form-control" name="date" id="date" placeholder="date of birth" />
                             </div>
 
-                            <!-- <label for="country">Country</label> -->
                             <div class="row">
 
                                 <div class="col-md-6">
@@ -220,7 +221,7 @@ if (isset($_REQUEST['login_id']) && !empty($_REQUEST['login_id'])) {
                             <span>or use your account</span>
                             <input type="text" name="usernameoremail" id="usernameoremail" placeholder="Username or Email " />
                             <input type="password" name="passwordlogin" id="passwordlogin" placeholder="Password" />
-                            <a class="alink" href="<?php echo FORGET_PASSPOWRD ;?>">Forgot your password?</a>
+                            <a class="alink" href="< ?php echo FORGET_PASSPOWRD ;?>">Forgot your password?</a>
                             <button class="blacButton myBtn_login" onclick="manage('login')" type="button">Sign In</button>
                         </form>
                     </div>
@@ -239,7 +240,7 @@ if (isset($_REQUEST['login_id']) && !empty($_REQUEST['login_id'])) {
                         </div>
                     </div>
                 </div>
-            </div><!-- body-center -->
+            </div> -->
 
 
             <?php include 'login_dispay_sm_phone.php'; ?>

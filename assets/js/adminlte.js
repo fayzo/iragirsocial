@@ -27,6 +27,13 @@ throw new Error('AdminLTE requires jQuery')
 +function ($) {
   'use strict';
 
+  $(".table_adminLA").DataTable({
+    "lengthChange": true,
+    "pageLength":10,
+    "lengthMenu": [[5,10, 25, 50, -1], [5,10, 25, 50, "All"]]
+  });
+
+  
   var DataKey = 'lte.boxrefresh';
 
   var Default = {

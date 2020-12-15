@@ -253,15 +253,15 @@ class Users{
             $allower_ext = array('jpeg', 'jpg', 'png', 'gif', 'bmp', 'pdf' , 'doc' , 'ppt','docx', 'xlsx','xls','ocx','lsx'); // valid extensions
             if (array_diff($fileActualExt,$allower_ext) == false) {
                 $expode = explode("=",$file);
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'].'/Blog_nyarwanda_CMS/uploads/jobs/';
+                $uploadDir = DOCUMENT_ROOT.'/uploads/jobs/';
                 for ($i=0; $i < count($expode); ++$i) { 
                       unlink($uploadDir.$expode[$i]);
                 }
             }else if (array_diff($fileActualExt,$allower_ext)[0] == 'mp4') {
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'].'/Blog_nyarwanda_CMS/uploads/jobs/';
+                $uploadDir = DOCUMENT_ROOT.'/uploads/jobs/';
                       unlink($uploadDir.$file);
             }else if (array_diff($fileActualExt,$allower_ext)[0] == 'mp3') {
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'].'/Blog_nyarwanda_CMS/uploads/jobs/';
+                $uploadDir = DOCUMENT_ROOT.'/uploads/jobs/';
                       unlink($uploadDir.$file);
             }
         }
@@ -922,6 +922,24 @@ class Users{
         $query= $mysqli->query($sql);
     }
         public function forgotUsernameCountsTodelete($table,$fields=array(),$user_id)
+    {
+        $columns="";
+        $i= 1;
+        foreach ($fields as $key => $value) {
+            # code...
+            $columns .= "{$key} = {$value}";
+            if ($i++ < count($fields)) {
+                # code...
+                 $columns .= ',';
+            }
+        }
+
+        $mysqli= $this->database;
+        $sql="UPDATE $table SET {$columns} WHERE user_id='$user_id'";
+        $query= $mysqli->query($sql);
+    }
+
+        public function CountViewIn_profile($table,$fields=array(),$user_id)
     {
         $columns="";
         $i= 1;

@@ -5,23 +5,30 @@
 <?php include "header_navbar_footer/header.php"?>
 
       <!-- Content Header (Page header) -->
-      <section class="content-header">
+      <!-- <section class="content-header">
+      <div class="row">
+          <div class="col-6">
                 <h1>
-                  <!-- Sidebar Collapsed -->
-                  <small>Layout with collapsed sidebar on load</small>
+                  Sidebar Collapsed
+                  <small>Layout with collapsed</small>
                 </h1>
+          </div>
+          <div class="col-6">
               <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="<?php if (isset($_SESSION['key'])){ echo HOME ; }else{ echo LOGIN; } ?>">Home</a></li>
-                  <li class="breadcrumb-item active"><i>
-                  <button type="button" class="btn btn-primary btn-sm" onclick="location.href='<?php echo BASE_URL_PUBLIC.$user['username'] ;?>'">Profile</button>
+                  <li class="breadcrumb-item"><a href="< ?php if (isset($_SESSION['key'])){ echo HOME ; }else{ echo LOGIN; } ?>">Home</a></li>
+                  <li class="breadcrumb-item active">
+                     <button type="button" class="btn btn-primary btn-sm" onclick="location.href='< ?php echo BASE_URL_PUBLIC.$user['username'] ;?>'">Profile</button>
+                  </li>
               </ol>
-      </section>
+          </div>
+        </div>
+      </section> -->
 
       <!-- Main content -->
       <section class="content">
 
         <div class="row">
-          <div class="col-md-3 mb-3 ">
+          <div class="col-md-3 mb-3 d-none d-md-block">
 
             <?php echo $home->userProfile($user_id); ?>
             <?php echo $trending->trends(); ?>
@@ -94,21 +101,24 @@
                     </span>
                   </div>
 
-                  <div class="message-footer text-muted">
+                  <div class="message-footer text-muted mb-2">
                     <div class="t-fo-left">
+
                       <ul>
                         <input type="file" name="files[]" id="file" multiple="">
+                        <?php if(isset($_SESSION['approval']) && $_SESSION['approval'] === 'on'){ ?>
                         <li><label for="file"><i class="fa fa-camera" aria-hidden="true"></i></label>
                           <span class="tweet-error">
                             <span style="color: red;" id="empty-posts"></span>
-
                           </span>
                         </li>
+                        <?php } ?>
                       </ul>
+
                     </div>
                     <div class="t-fo-right">
                       <span id="count">200</span>
-                      <input type="submit" class="btn main-active" name="tweet" value="Post">
+                      <input <?php echo (isset($_SESSION['key']))?'type="submit"':'type="button" id="login-please" data-login="1"';?> class="btn main-active" name="tweet" value="Post">
                     </div>
                     <!--  progress-xs -->
                     <span class="progress progress-hide" style="display: none;">
@@ -135,7 +145,7 @@
           </div>
           <!-- col -->
 
-          <div class="col-md-3">
+          <div class="col-md-3 d-none d-md-block">
             <!-- whoTofollow: user whoTofollow style 1 -->
             <?php echo $follow->whoTofollow($user_id,$user_id) ;?>
           

@@ -7,7 +7,11 @@
 
       <!-- Main content -->
       <section class="content-header">
-                <h1><i>Post</i></h1>
+      <div class="row">
+          <div class="col-6">
+                <h1><i> Your Post</i></h1>
+          </div>
+          <div class="col-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="<?php if (isset($_SESSION['key'])){ echo HOME ; }else{ echo LOGIN; } ?>">Home</a></li>
                     <li class="breadcrumb-item"><a href="<?php if (isset($_SESSION['key'])){ echo BASE_URL_PUBLIC.$profileData['username'].'.album' ; }else{ echo LOGIN; } ?>">Photo</i></a></li>
@@ -17,12 +21,14 @@
                     <?php } } ?>
                     <li class="breadcrumb-item active"><i> <?php echo $follow->followBtn($profileData['user_id'],$user_id,$profileData['user_id']) ;?></i></li>
                 </ol>
+          </div>
+      </div>
       </section>
       <!-- Main content -->
       <section class="content">
 
         <div class="row">
-          <div class="col-md-3 mb-3 ">
+          <div class="col-md-3 mb-3 d-none d-md-block ">
             <?php echo $home->userProfile($user_id); ?>
 
             <div class="sticky-tops" style="top: 52px;">
@@ -90,7 +96,7 @@
             </div>
             <!-- /.col-md-6 -->
 
-          <div class="col-md-3">
+          <div class="col-md-3 d-none d-md-block">
             <?php $follow->whoTofollow($profileData['user_id'],$profileData['user_id'])?>
 
             <div class="sticky-top " style="top: 52px;">

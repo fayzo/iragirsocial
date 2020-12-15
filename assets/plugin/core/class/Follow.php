@@ -300,7 +300,7 @@ class Follow extends Events
                                 '.$this->lengthsOfWhoNewCome($whoTofollow['date_registry']).'
                             </div>
                             <ul class="whoTofollow-list-info">
-                                <li><a href="'.BASE_URL_PUBLIC.$whoTofollow['username'].'" id="'.$whoTofollow["user_id"].'" >'.$whoTofollow['firstname']." ".$whoTofollow['lastname'].'</a>
+                                <li><a href="'.BASE_URL_PUBLIC.$whoTofollow['username'].'" id="'.$whoTofollow["user_id"].'" >'.$whoTofollow['username'].'</a>
                                 </li>
                                 <li>'.((!empty($whoTofollow['career'])?'
                                 <small class="my-0 ml-2" style="font-size: 12px;">'.$whoTofollow['career'].'</small>

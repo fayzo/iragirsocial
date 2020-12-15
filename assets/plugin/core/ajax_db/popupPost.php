@@ -38,7 +38,7 @@ if (isset($_POST['showpoptweet']) && !empty($_POST['showpoptweet'])) {
                         </div>
                         <?php } ?>
                         <span class="username">
-                            <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                            <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                             <!-- //Jonathan Burke Jr. -->
                         </span>
                         <span class="description">Shared publicly - <?php echo $home->getTweetLink($tweet['status']); ?></span>

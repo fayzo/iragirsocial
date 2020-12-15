@@ -433,6 +433,44 @@ class Home extends Comment {
    <?php  }
 
 
+    public function siderbar_option() { ?>
+
+            <?php if (isset($_SESSION['key'])) { ?>
+                <ul>
+                    <li><a href="jobs.php"><i class="fa fa-circle-o text-yellow"></i> Job</a></li>
+                    <li><a href="career_profession.php"><i class="fa fa-circle-o text-aqua"></i>Professional</a></li>
+                    <li><a href="Unemployment.php"><i class="fa fa-circle-o text-aqua"></i>Unemployment</a></li>
+                    <li><a href="icyamunara.php"><i class="fa fa-shopping-basket "></i>Marketplace</a></li>
+                    <li><a href="events.php"><i class="fa fa-circle-o text-red"></i>Events</a></li>
+                    <li><a href="crowfund.php"><i class="fa fa-money "></i> gushoraStartUp</a></li>
+                    <li><a href="fundraising.php"><i class="fa fa-heartbeat"></i>Fundraising</a></li>
+                    <li><a href="food.php"><i class="fa fa-cutlery"></i>Foodzana</a></li>
+                    <li><a href="icyamunara.php"><i class="fa fa-shopping-basket"></i>Cyamunara</a></li>
+                    <li><a href="house.php"><i class="fa fa-home"></i>House</a></li>
+                    <li><a href="car.php"><i class="fa fa-car"></i>Car</a></li>
+                    <li><a href="school.php"><i class="fa fa-building"></i>School</a></li>
+                </ul>
+              
+              <?php }else { ?>
+
+                <ul>
+                    <li><a href="irangiro.jobs"><i class="fa fa-circle-o text-yellow"></i> Job</a></li>
+                    <li><a href="irangiro.career_profession"><i class="fa fa-circle-o text-aqua"></i>Professional</a></li>
+                    <li><a href="irangiro.Unemployment"><i class="fa fa-circle-o text-aqua"></i>Unemployment</a></li>
+                    <li><a href="irangiro.icyamunara"><i class="fa fa-shopping-basket "></i>Marketplace</a></li>
+                    <li><a href="irangiro.events"><i class="fa fa-circle-o text-red"></i>Events</a></li>
+                    <li><a href="irangiro.crowfund"><i class="fa fa-money "></i> gushoraStartUp</a></li>
+                    <li><a href="irangiro.fundraising"><i class="fa fa-heartbeat"></i>Fundraising</a></li>
+                    <li><a href="irangiro.food"><i class="fa fa-cutlery"></i>Foodzana</a></li>
+                    <li><a href="irangiro.icyamunara"><i class="fa fa-shopping-basket"></i>Cyamunara</a></li>
+                    <li><a href="irangiro.house"><i class="fa fa-home"></i>House</a></li>
+                    <li><a href="irangiro.car"><i class="fa fa-car"></i>Car</a></li>
+                    <li><a href="irangiro.school"><i class="fa fa-building"></i>School</a></li>
+                </ul>
+
+            <?php } ?>
+    <?php }
+
     public function options(){ ?>
 
          <div class="card text-center">
@@ -443,35 +481,35 @@ class Home extends Comment {
 
             <?php if (isset($_SESSION['key'])) { ?>
                 <ul>
-                    <li><h5 class="card-title"><a href="jobs0.php">Jobs</a></h5></li>
+                    <li><h5><a href="jobs0.php">Jobs</a></h5></li>
                     <li><h5><a href="career_profession.php">Professional</a></h5> </li>
-                    <li><h5 class="card-title"><a href="crowfund.php">GushoraStartUp</a></h5> </li>
-                    <li><h5 class="card-title"><a href="fundraising.php"> Fundraising</a></h5></li>
+                    <li><h5><a href="crowfund.php">GushoraStartUp</a></h5> </li>
+                    <li><h5><a href="fundraising.php"> Fundraising</a></h5></li>
                     <?php if($_SESSION['approval'] === 'on'){ ?>
                     <li><h5><a href="Unemployment.php"> Unemployment</a></h5> </li>
                     <?php } ?>
-                    <li><h5 class="card-title"><a href="sale.php">Sale</a></h5></li>
-                    <li><h5 class="card-title"><a href="events.php">Events</a></h5></li>
-                    <li><h5 class="card-title"><a href="house.php">House</a></h5></li>
-                    <li><h5 class="card-title"><a href="car.php">Car</a></h5></li>
-                    <li><h5 class="card-title"><a href="icyamunara.php">Cyamunara</a></h5></li>
-                    <li><h5 class="card-title"><a href="food.php">Foodzana</a></h5></li>
-                    <li><h5 class="card-title"><a href="school.php">school</a></h5> </li>
+                    <li><h5><a href="sale.php">Sale</a></h5></li>
+                    <li><h5><a href="events.php">Events</a></h5></li>
+                    <li><h5><a href="house.php">House</a></h5></li>
+                    <li><h5><a href="car.php">Car</a></h5></li>
+                    <li><h5><a href="icyamunara.php">Cyamunara</a></h5></li>
+                    <li><h5><a href="food.php">Foodzana</a></h5></li>
+                    <li><h5><a href="school.php">school</a></h5> </li>
                 </ul>
               
               <?php }else { ?>
                <ul>
-                   <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.jobs0">Jobs</a></h5></li>
-                   <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.career_profession"> Professional</a></h5> </li>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.crowfund">GushoraStartUp</a></h5> </li>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.fundraising"> Fundraising</a></h5></li>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.events">Events</a></h5>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.house">House</a></h5>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.car">Car</a></h5>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.icyamunara">icyamunara</a></h5>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.sale">Sale</a></h5></li>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.food">Foodzana</a></h5>
-                    <li><h5 class="card-title "><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.school">school</a></h5> </li>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.jobs0">Jobs</a></h5></li>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.career_profession"> Professional</a></h5> </li>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.crowfund">GushoraStartUp</a></h5> </li>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.fundraising"> Fundraising</a></h5></li>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.events">Events</a></h5>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.house">House</a></h5>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.car">Car</a></h5>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.icyamunara">icyamunara</a></h5>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.sale">Sale</a></h5></li>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.food">Foodzana</a></h5>
+                    <li><h5><a href="<?php echo BASE_URL_PUBLIC; ?>irangiro.school">school</a></h5> </li>
                 </ul>
                 <?php } ?>
             </div>
@@ -517,29 +555,29 @@ class Home extends Comment {
                 </ul>
               <?php }else { ?>
                <ul>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.crowfund">GushoraStartUp</a></h5> </li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.fundraising"> Fundraising</a></h5></li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.career_profession"> Professional</a></h5> </li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.sale">Sale</a></h5></li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.gurisha">Gurisha</a></h5></li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.blog">Blog</a></h5></li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.jobs0">Jobs</a></h5></li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.events">Events</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.movies">Movies</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.sports">Sports</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.news">news</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.entertainment">Entertainment</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.rwandaPhotos">Rwanda-Landscape</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.Tembera">Tembera-ltd</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.hotelbooking">Hotel-booking</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.motel">Motel</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.house">House</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.car">Car</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.icyamunara">Cyamunara</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.food">Foodzana</a></h5>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.domestic">domestic Helpers</a></h5> </li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.school">school</a></h5> </li>
-                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>jojo.members_earning">members earning</a></h5> </li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.crowfund">GushoraStartUp</a></h5> </li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.fundraising"> Fundraising</a></h5></li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.career_profession"> Professional</a></h5> </li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.sale">Sale</a></h5></li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.gurisha">Gurisha</a></h5></li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.blog">Blog</a></h5></li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.jobs0">Jobs</a></h5></li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.events">Events</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.movies">Movies</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.sports">Sports</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.news">news</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.entertainment">Entertainment</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.rwandaPhotos">Rwanda-Landscape</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.Tembera">Tembera-ltd</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.hotelbooking">Hotel-booking</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.motel">Motel</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.house">House</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.car">Car</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.icyamunara">Cyamunara</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.food">Foodzana</a></h5>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.domestic">domestic Helpers</a></h5> </li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.school">school</a></h5> </li>
+                    <li><h5 class="card-title"><a class="alink" href="<?php echo BASE_URL_PUBLIC; ?>irangiro.members_earning">members earning</a></h5> </li>
                 </ul>
                 <?php } ?>
             </div>
@@ -893,7 +931,7 @@ class Home extends Comment {
                             </div><!--  in b box end-->
                             <div class="info-body-name">
                                 <div class="in-b-name">
-                                    <div><a href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['firstname']." ".$user['lastname'] ;?></a></div> <!-- Nina Mcintire -->
+                                    <div><a href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['username'] ;?></a></div> <!-- Nina Mcintire -->
                                     <span><small><a href="<?php echo BASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['career'] ;?></a></small></span>
                                 </div><!-- in b name end-->
                             </div><!-- info body name end-->
@@ -1682,7 +1720,7 @@ class Home extends Comment {
             $query = "INSERT INTO trends (hashtag,created_on,target) VALUES('$trend', '$date','$tweet_id')";
             $mysqli->query($query);
         }
-        var_dump($resuslt);
+        // var_dump($resuslt);
       
     }
 
@@ -1726,6 +1764,7 @@ class Home extends Comment {
 
       {
         $tweet= preg_replace('/(http:\/\/)([\w+.])([\w.]+)/','<a  style="color:green;" href="$0" target="_blink">$0</a>',$tweet);
+        $tweet= preg_replace('/(https:\/\/)([\w+.])([\w.]+)/','<a  style="color:green;" href="$0" target="_blink">$0</a>',$tweet);
         // $tweet= preg_replace('/(https:\/\/)([\w+.])([\w.]+)/','<a style="color:green;" href="$0" target="_blink">$0</a>',$tweet);
         $tweet= preg_replace('/#([\w]+)/','<a style="color:green;" href="'.BASE_URL_PUBLIC.'$1.hashtag" >$0</a>',$tweet);
         $tweet= preg_replace('/@([\w]+)/','<a style="color:green;" href="'.BASE_URL_PUBLIC.'$1">$0</a>',$tweet);
@@ -1812,7 +1851,7 @@ class Home extends Comment {
         }
     }
 
-      public function retweet($retweet_id,$user_id,$tweet_by,$comments)
+    public function retweet($retweet_id,$user_id,$tweet_by,$comments)
     {
         $mysqli= $this->database;
         $stmt = $mysqli->stmt_init();
@@ -1832,9 +1871,9 @@ class Home extends Comment {
         $stmt->bind_param('i',$stmt->insert_id);
 
         if ($retweet_id != $user_id) {
-            var_dump($tweet_by,$user_id, $retweet_id,'retweet');
+            // var_dump($tweet_by,$user_id, $retweet_id,'retweet');
             Notification::SendNotifications($tweet_by,$user_id,$retweet_id,'retweet');
-            var_dump(Notification::SendNotifications($tweet_by,$user_id,$retweet_id,'retweet'));
+            // var_dump(Notification::SendNotifications($tweet_by,$user_id,$retweet_id,'retweet'));
         }
         
         return $stmt->execute();
@@ -1986,7 +2025,7 @@ class Home extends Comment {
                                          </div>
                                          </div>
                                         <span class="username">
-                                            <a style="float:left;padding-right:3px;" href="<?php echo PROFILEBASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['firstname']." ".$user['lastname'] ;?></a>
+                                            <a style="float:left;padding-right:3px;" href="<?php echo PROFILEBASE_URL_PUBLIC.$user['username'] ;?>"><?php echo $user['username'] ;?></a>
                                             <!-- //Jonathan Burke Jr. -->
                                             <span class="description">Shared public - <?php echo $this->timeAgo($retweet['posted_on']); ?></span>
                                         </span>
@@ -2065,7 +2104,7 @@ class Home extends Comment {
                                                                    </div>
                                                                    </div>
                                                                   <span class="username">
-                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
                                                                     <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2130,7 +2169,7 @@ class Home extends Comment {
                                                                     </div>
                                                                     </div>
                                                                     <span class="username">
-                                                                        <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                        <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                         <!-- //Jonathan Burke Jr. -->
                                                                     </span>
                                                                     <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2194,7 +2233,7 @@ class Home extends Comment {
                                                                     </div>
                                                                     </div>
                                                                     <span class="username">
-                                                                        <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                        <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                         <!-- //Jonathan Burke Jr. -->
                                                                     </span>
                                                                     <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2249,7 +2288,7 @@ class Home extends Comment {
                                                                    </div>
                                                                    </div>
                                                                   <span class="username">
-                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
                                                                     <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2301,7 +2340,7 @@ class Home extends Comment {
                                                                    </div>
                                                                    </div>
                                                                   <span class="username">
-                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
                                                                     <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2353,7 +2392,7 @@ class Home extends Comment {
                                                                    </div>
                                                                    </div>
                                                                   <span class="username">
-                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                     <a style="padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                       <!-- //Jonathan Burke Jr. -->
                                                                   </span>
                                                                     <span class="description">Shared publicly -  <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2402,7 +2441,7 @@ class Home extends Comment {
                                                                    </div>
                                                                    </div>
                                                                    <span class="username">
-                                                                       <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                                                       <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                                        <!-- //Jonathan Burke Jr. -->
                                                                        <span class="description">Shared publicly - <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
                                                                    </span>
@@ -2431,7 +2470,7 @@ class Home extends Comment {
                                          </div>
                                          </div>
                                         <span class="username">
-                                            <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['firstname']." ".$tweet['lastname'] ;?></a>
+                                            <a href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                             <!-- //Jonathan Burke Jr. -->
                                         </span>
                                         <span class="description">Shared publicly - <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
@@ -2951,35 +2990,35 @@ class Home extends Comment {
 
                               <ul class="mt-2 list-inline" style="list-style-type: none; margin-bottom:10px;">  
                                         <?php if($tweet['tweet_id'] == $retweet['retweet_id'] || $user_id == $retweet['retweet_by']){ ?>
-                                         <li class=" list-inline-item"><button class="share-btn retweeted text-sm mr-2" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                                         <li class=" list-inline-item"><button <?php echo (isset($_SESSION['key']))?'class="share-btn retweeted text-sm mr-2"':'class=" text-sm mr-2" id="login-please" data-login="1"' ;?>  data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                                          <i class="fa fa-share green mr-1" style="color: green"> <span class="retweetcounter"><?php echo $retweet["retweet_counts"];?></span></i>
                                             Share</button></li>
                                         <?php }else{ ?>
 
-                                               <li  class=" list-inline-item"> <button class="share-btn retweet text-sm mr-2" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                                               <li  class=" list-inline-item"> <button  <?php echo (isset($_SESSION['key']))?'class="share-btn retweet text-sm mr-2"':'class=" text-sm mr-2" id="login-please" data-login="1"' ;?>  data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                                                 <?php if($retweet["retweet_counts"] > 0){ echo '<i class="fa fa-share mr-1" style="color: green"> <span class="retweetcounter">'.$retweet["retweet_counts"].'</span></i>' ; }else{ echo '<i class="fa fa-share mr-1"> <span class="retweetcounter">'.$retweet["retweet_counts"].'</span></i>';} ?>
                                                    Share</button></li>
 
                                          <?php } ?>
                                             <?php if($likes['like_on'] == $tweet['tweet_id']){ ?>
-                                                <li  class=" list-inline-item"><button class="unlike-btn text-sm" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                                                <li  class=" list-inline-item"><button <?php echo (isset($_SESSION['key']))?'class="unlike-btn text-sm"':'class="text-sm" id="login-please" data-login="1"' ;?> data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                                                 <i class="fa fa-thumbs-up mr-1" style="color: red"> <span class="likescounter"><?php echo $tweet['likes_counts'] ;?></span></i>
                                                     Like</button></li>
 
                                             <?php }else{ ?>
-                                                  <li  class=" list-inline-item"> <button class="like-btn text-sm" data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
+                                                  <li  class=" list-inline-item"> <button <?php echo (isset($_SESSION['key']))?'class="like-btn text-sm"':'class="text-sm" id="login-please" data-login="1"' ;?> data-tweet="<?php echo $tweet['tweet_id']; ?>"  data-user="<?php echo $tweet['tweetBy']; ?>">
                                                    <i class="fa fa-thumbs-o-up mr-1"> <span class="likescounter"><?php if ($tweet['likes_counts'] > 0){ echo $tweet['likes_counts'];}else{ echo '';} ?></span></i>
                                                        Like</button></li>
                                             <?php } ?>
                                          
                                          <span style="float:right">
                                     
-                                          <li  class=" list-inline-item"><button class="comments-btn text-sm" data-target="#a<?php echo  $tweet["tweet_id"];?>" data-toggle="collapse">
+                                          <li  class=" list-inline-item"><button <?php echo (isset($_SESSION['key']))?'class="comments-btn text-sm" data-toggle="collapse"':'class="text-sm" id="login-please" data-login="1"' ;?> data-target="#a<?php echo  $tweet["tweet_id"];?>" >
                                               <i class="fa fa-comments-o mr-1"></i> Comments (<?php echo $this->CountsComment($tweet["tweet_id"]); ?>)
                                           </button></li>
                                         
 
-                                         <?php if ($tweet["tweetBy"] == $user_idSession){ ?>
+                                         <?php if (isset($_SESSION['key']) && $tweet["tweetBy"] == $user_idSession){ ?>
                                             <li  class=" list-inline-item">
                                                 <ul class="deleteButt" style="list-style-type: none; margin:0px;" >
                                                     <li>
@@ -3001,7 +3040,7 @@ class Home extends Comment {
                                         name="comment"  placeholder="Reply to  <?php echo $tweet['username'] ;?>" >
                                     <div class="input-group-append">
                                         <span class="input-group-text btn" style="padding: 0px 10px;" 
-                                            aria-label="Username" aria-describedby="basic-addon1" id="post_HomeComment"  data-tweet="<?php echo $tweet['tweet_id'];?>">
+                                            aria-label="Username" aria-describedby="basic-addon1" <?php echo (isset($_SESSION['key']))?'id="post_HomeComment"':'id="login-please" data-login="1"' ;?>  data-tweet="<?php echo $tweet['tweet_id'];?>">
                                             <span class="fa fa-arrow-right text-muted" ></span>
                                         </span>
                                     </div>

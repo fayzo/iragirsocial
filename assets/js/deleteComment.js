@@ -31,7 +31,7 @@ $(document).ready(function (e) {
                                 $("#responseDeletePost").fadeOut();
                             }, 1000);
                             setInterval(function() {
-                                // location.reload();
+                                location.reload();
                             }, 1100);
                             console.log(response);
                         }

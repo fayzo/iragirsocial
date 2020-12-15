@@ -187,9 +187,12 @@
               </ul>
             </li>
             <!-- Control Sidebar Toggle Button -->
+            <?php if(isset($_SESSION['approval']) && $_SESSION['approval'] === 'on'){ ?>
+
             <li class="hidden-xs">
               <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
             </li>
+                 <?php } ?>
           </ul>
         </div>
           <?php }else{ ?>

@@ -17,17 +17,17 @@
             <p><?php echo $user['username'];?></p>
             <a href="#">
               <?php if ($user['chat'] == 'on') { ?>
-                      <i class="fa fa-circle text-success"></i>
+                      <i class="fa fa-circle text-success"></i>0nline</a>
 							<?php }else {?>
-                      <i class="fa fa-circle text-danger"></i>
+                      <i class="fa fa-circle text-danger"></i>0ffline</a>
 							<?php } ?>
-            Online</a>
           </div>
         </div>
         <!-- search form -->
+        <div class="search-result-siderbar"></div>
         <form action="#" method="get" class="sidebar-form">
           <div class="input-group">
-            <input type="text" name="q" class="form-control formnsider" placeholder="Search...">
+            <input type="text" name="q" class="form-control search-siderbar formnsider" placeholder="Search...">
             <span class="input-group-btn">
               <button type="submit" name="search" id="search-btn" class="btn btn-flat formnsider"><i class="fa fa-search"></i>
               </button>
@@ -38,6 +38,8 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <!-- <li class="header">MAIN NAVIGATION</li> -->
+          <?php if(isset($_SESSION['approval']) && $_SESSION['approval'] === 'on'){ ?>
+
           <li class="treeview">
             <a href="#">
               <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -50,6 +52,8 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
             </ul>
           </li>
+              <?php } ?>
+
           <li class="treeview">
             <a href="hashtag.php">
               <i class="fa fa-hashtag"></i> <span>Hashtag</span>

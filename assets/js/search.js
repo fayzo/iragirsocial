@@ -29,5 +29,21 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('.search-siderbar').keyup(function () {
+        var searcher = $(this).val();
+         $.ajax({
+                    url: 'core/ajax_db/search-siderbar.php',
+                    method: 'POST',
+                    dataType: 'text',
+                    data: {
+                        search: searcher,
+                    }, success: function (response) {
+                        $(".search-result-siderbar").html(response);
+                        // console.log(response);
+                    }
+                });
+    });
+
    
 });

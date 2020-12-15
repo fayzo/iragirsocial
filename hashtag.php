@@ -27,7 +27,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
 
     <!-- Main content -->
     <section class="content-header">
-        <div class="row mb-2">
+        <div class="row">
             <div class="col-sm-6 ">
                 <span  class="float-left h1"><?php echo 'Hashtag' ; ?></span>
                 <span  class="float-right h1"><i><?php echo '#'.$hashtag ; ?></i></span>
@@ -46,7 +46,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
       <section class="content">
         <div class="row">
 
-            <div class="col-md-3 mb-3">
+            <div class="col-md-3 mb-3 d-none d-md-block">
                 <div class="mb-2">
                     <?php echo $home->userProfile($user_id); ?>
                 </div>
@@ -2569,7 +2569,7 @@ if (isset($_GET['hashtag']) && !empty($_GET['hashtag'])) {
             </div>
             <!-- /.col-md-6 -->
 
-            <div class="col-md-3">
+            <div class="col-md-3 d-none d-md-block">
                 <div class="row">
                     <div class="col-md-12 mb-3">
                        <?php echo $follow->whoTofollow($user_id,$user_id) ;?>

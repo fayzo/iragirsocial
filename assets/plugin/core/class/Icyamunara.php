@@ -276,15 +276,15 @@ class Icyamunara extends House {
             $allower_ext = array('jpeg', 'jpg', 'png', 'gif', 'bmp', 'pdf' , 'doc' , 'ppt'); // valid extensions
             if (array_diff($fileActualExt,$allower_ext) == false) {
                 $expode = explode("=",$photo);
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'].'/Blog_nyarwanda_CMS/uploads/icyamunara/';
+                $uploadDir = DOCUMENT_ROOT.'/uploads/icyamunara/';
                 for ($i=0; $i < count($expode); ++$i) { 
                       unlink($uploadDir.$expode[$i]);
                 }
             }else if (array_diff($fileActualExt,$allower_ext)[0] == 'mp4') {
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'].'/Blog_nyarwanda_CMS/uploads/icyamunara/';
+                $uploadDir = DOCUMENT_ROOT.'/uploads/icyamunara/';
                       unlink($uploadDir.$photo);
             }else if (array_diff($fileActualExt,$allower_ext)[0] == 'mp3') {
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'].'/Blog_nyarwanda_CMS/uploads/icyamunara/';
+                $uploadDir = DOCUMENT_ROOT.'/uploads/icyamunara/';
                       unlink($uploadDir.$photo);
             }
         }

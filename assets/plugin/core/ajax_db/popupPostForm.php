@@ -47,12 +47,15 @@ $user = $home->userData($_SESSION['key']);
                             <div class="t-fo-left">
                                 <ul>
                                     <input type="file" name="files[]" id="file" multiple>
+                                      <?php if(isset($_SESSION['approval']) && $_SESSION['approval'] === 'on'){ ?>
+
                                     <li><label for="file"><i class="fa fa-camera"
                                                 aria-hidden="true"></i></label>
                                         <span class="tweet-error">
                                             <span style="color: red;" id="empty-posts2"></span>
                                         </span>
                                     </li>
+                                      <?php } ?>
                                 </ul>
                             </div>
                             <div class="t-fo-right">

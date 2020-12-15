@@ -4,6 +4,8 @@
 <title><?php echo $profileData['username'].' your profile'; ?></title>
 <?php include "header_navbar_footer/header.php"?>
 
+<?php $users->CountViewIn_profile('users',
+array('countViewin_profile' => 'countViewin_profile +1', ),$profileData['user_id']); ?>
 
       <!-- Main content -->
       <section class="content">
@@ -56,7 +58,7 @@
                         </div>
                         <!-- /.description-block -->
                         <div class="description">
-                            <h5 class="description-header">35</h5>
+                            <h5 class="description-header"><?php echo $profileData['countViewin_profile'] ;?></h5>
                             <span class="description-text">VIEWS</span>
                         </div>
                         <!-- /.description-block -->
@@ -71,7 +73,11 @@
       </div>
       </section>
       <section class="content-header">
+        <div class="row">
+          <div class="col-6">
                 <h1><i>Profile</i></h1>
+          </div>
+          <div class="col-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="<?php if (isset($_SESSION['key'])){ echo HOME ; }else{ echo LOGIN; } ?>">Home</a></li>
                     <li class="breadcrumb-item"><a href="<?php if (isset($_SESSION['key'])){ echo BASE_URL_PUBLIC.$profileData['username'].'.album' ; }else{ echo LOGIN; } ?>">Photo</i></a></li>
@@ -81,12 +87,14 @@
                     <?php } } ?>
                     <li class="breadcrumb-item active"><i> <?php echo $follow->followBtn($profileData['user_id'],$user_id,$profileData['user_id']) ;?></i></li>
                 </ol>
+          </div>
+      </div>
       </section>
       <!-- Main content -->
       <section class="content">
 
         <div class="row">
-          <div class="col-md-3 mb-3 ">
+          <div class="col-md-3 mb-3 d-none d-md-block">
             <?php echo $home->userProfile($profileData['user_id']); ?>
 
             <div class="sticky-tops" style="top: 52px;">
@@ -116,10 +124,10 @@
 
                           <p class="text-muted">
                               <span class="badge badge-danger"> <?php echo $profileData['skills']; ?></span>
-                              <span class="badge badge-success">Coding</span>
+                              <!-- <span class="badge badge-success">Coding</span>
                               <span class="badge badge-info">Javascript</span>
                               <span class="badge badge-warning">PHP</span>
-                              <span class="badge badge-primary">Node.js</span>
+                              <span class="badge badge-primary">Node.js</span> -->
                           </p>
 
                           <strong><i class="fa fa-file-text-o mr-1"></i> Hobbys</strong>

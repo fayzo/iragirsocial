@@ -25,7 +25,7 @@
       <section class="content">
         <div class="row">
 
-          <div class="col-md-3 mb-3">
+          <div class="col-md-3 mb-3 d-none d-md-block">
             <!-- Profile Image -->
             <div class="info-box mb-3">
               <div class="info-inner message-color">
@@ -285,7 +285,7 @@
           </div>
               <!-- /.col -->
 
-          <div class="col-md-3">
+          <div class="col-md-3 d-none d-md-block">
             <div class="card mb-3">
               <div class="card-header main-active text-center">
                 <i> WHO TO FOLLOW </i>

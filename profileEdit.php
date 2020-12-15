@@ -1,6 +1,6 @@
 
-<!-- < ?php include "header_navbar_footer/header_if_login.php"?> -->
-<?php include "header_navbar_footer/Get_usernameProfile.php"?>
+<?php include "header_navbar_footer/header_if_login.php"?>
+<!-- < ?php include "header_navbar_footer/Get_usernameProfile.php"?> -->
 <title><?php echo $user['username'].' your Profile-edit'; ?></title>
 <?php include "header_navbar_footer/header.php"?>
 
@@ -107,7 +107,7 @@
                         </div>
                         <!-- /.description-block -->
                         <div class="description">
-                            <h5 class="description-header">35</h5>
+                            <h5 class="description-header"><?php echo $user['countViewin_profile'] ;?></h5>
                             <span class="description-text">VIEWS</span>
                         </div>
                         <!-- /.description-block -->
@@ -123,13 +123,19 @@
       </section>
 
       <section class="content-header">
+        <div class="row">
+            <div class="col-6">
                 <h1><i> Profile Edit</i></h1>
+            </div>
+            <div class="col-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="<?php if (isset($_SESSION['key'])){ echo HOME ; }else{ echo LOGIN; } ?>">Home</a></li>
                     <li class="breadcrumb-item active"><i>
                     <button type="button" class="btn btn-primary btn-sm" onclick="location.href='<?php echo BASE_URL_PUBLIC.$user['username'] ;?>'">Profile</button>
                     </i></li>
                 </ol>
+            </div>
+        </div>
       </section>
 
       <!-- Main content -->

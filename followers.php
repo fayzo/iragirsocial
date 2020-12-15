@@ -56,7 +56,7 @@
                         </div>
                         <!-- /.description-block -->
                         <div class="description">
-                            <h5 class="description-header">35</h5>
+                            <h5 class="description-header"><?php echo $profileData['countViewin_profile'] ;?></h5>
                             <span class="description-text">VIEWS</span>
                         </div>
                         <!-- /.description-block -->
@@ -71,7 +71,7 @@
       </div>
       </section>
       <section class="content-header">
-        <div class="row mb-2">
+        <div class="row">
             <div class="col-3">
                 <h1><i>Followers</i></h1>
             </div>
@@ -92,7 +92,7 @@
       <section class="content">
 
         <div class="row">
-          <div class="col-md-3 mb-3 ">
+          <div class="col-md-3 mb-3 d-none d-md-block">
             <?php echo $home->userProfile($profileData['user_id']); ?>
 
             
@@ -146,7 +146,7 @@
             </div>
             <!-- /.col-md-6 -->
 
-          <div class="col-md-3">
+          <div class="col-md-3 d-none d-md-block">
             <?php $follow->whoTofollow($profileData['user_id'],$profileData['user_id'])?>
 
             <div class="sticky-top " style="top: 52px;">

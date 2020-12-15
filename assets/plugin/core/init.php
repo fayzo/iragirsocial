@@ -19,8 +19,8 @@ include('class/Posts_copyDraft.php');
 include('class/Post_home.php');
 
 
-define('BASE_URL_PUBLIC', 'http://localhost/admin_real_estate/');
-define('BASE_URL_LINK', 'http://localhost/admin_real_estate/assets/');
+define('BASE_URL_PUBLIC', 'http://localhost/irangiro_social/');
+define('BASE_URL_LINK', 'http://localhost/irangiro_social/assets/');
 
 
 define('F_INDEX', BASE_URL_PUBLIC.'irangiro.home');
@@ -34,7 +34,7 @@ define('FORGET_PASSPOWRD', BASE_URL_PUBLIC.'include/forgotpassword.php');
 define('CREATE_PASSPOWRD', BASE_URL_PUBLIC.'include/createpassword.php');
 
 // UPLOAD PHOTO
-define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/admin_real_estate');
+define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/irangiro_social');
 // UPLOAD PHOTO
 
 // END SETTING FILE

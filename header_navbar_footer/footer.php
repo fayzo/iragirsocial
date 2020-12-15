@@ -1,14 +1,14 @@
 
  <?php if (isset($_SESSION['key'])){ ?>
    <!-- DIRECT CHAT PRIMARY -->
-   <div class="row">
+   <!-- <div class="row">
        <div class="col-md-3">
            <div class="card direct-chats direct-chat direct-chat-primary">
                <div class="card-header main-active py-2">
                    <h5 class="card-title pb-0"><i> Message Chat</i></h5>
 
                    <div class="card-tools">
-                       <span id="tooltipsmessages1" data-toggle="tooltip" title="3 New Messages" class="badge badge-primary"><?php if( $notific['totalmessage'] > 0){echo '<span>'.$notific['totalmessage'].'</span>'; } ?></span>
+                       <span id="tooltipsmessages1" data-toggle="tooltip" title="3 New Messages" class="badge badge-primary">< ?php if( $notific['totalmessage'] > 0){echo '<span>'.$notific['totalmessage'].'</span>'; } ?></span>
                        <button type="button" class="btn btn-tool btn-sm collapse-minus" data-toggle="collapse"
                            data-target="#collapseExample4">
                            <i class="fa fa-minus"></i>
@@ -17,22 +17,20 @@
                            data-widget="chat-pane-toggle">
                            <i class="fa fa-comments"></i>
                        </button>
-                       <!-- <button type="button" class="btn btn-tool btn-sm" onclick="removes()"><i class="fa fa-times close-chat"></i> -->
-                           <!--  data-widget="remove"  onclick="removes()" -->
                         <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
                     </button>
                        </button>
                    </div>
                </div>
-               <!-- /.card-header -->
+               /.card-header
                <div class="collapse" id="collapseExample4">
                </div>
-               <!-- collapse -->
+               collapse
            </div>
-           <!--/.direct-chat -->
+           /.direct-chat
        </div>
-       <!-- /.col -->
-   </div>
+       /.col
+   </div> -->
    <!-- /.row -->
    <!-- END DIRECT CHAT PRIMARY -->
    <!-- END DIRECT CHAT PRIMARY -->
@@ -46,9 +44,9 @@
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.18
+        <b>Version</b> 1.0.01
       </div>
-      <strong>Copyright &copy; 2014-2019 <a href="https://iragiro.com">Irangiro LTD</a>.</strong> All rights
+      <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> <a href="https://iragiro.com">Irangiro LTD</a>.</strong> All rights
       reserved.
     </footer>
 
@@ -75,6 +73,8 @@
   <script src="<?php echo BASE_URL_LINK ;?>dist/js/bootstrap.min.js"></script>
   <!-- SlimScroll -->
   <script src="<?php echo BASE_URL_LINK ;?>dist/js/jquery.slimscroll.min.js"></script>
+  <script src="<?php echo BASE_URL_LINK;?>dist/js/jquery.dataTables.min.js"></script>
+  <script src="<?php echo BASE_URL_LINK;?>dist/js/bootstrap4.min.js"></script>
   <!-- FastClick -->
   <script src="<?php echo BASE_URL_LINK ;?>dist/js/fastclick.js"></script>
   <script src="<?php echo BASE_URL_LINK ;?>dist/js/jquery.Jcrop.min.js"></script>

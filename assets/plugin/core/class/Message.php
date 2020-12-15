@@ -16,7 +16,7 @@ class Message extends Home
     //         FROM message WHERE message_to = $user_id  AND M. status= 1 GROUP BY message_from ORDER BY M. message_on Desc
     //     ) ORDER BY M. message_on Desc";
 
-    // // $query="SELECT * from users U
+    // $query="SELECT * from users U
     // inner join (select message,message_on,MAX(message_from)as ma, MAX(message_to) as maxid from message group by message_on) as b on
     //     U.user_id= b.ma WHERE b.maxid= $user_id GROUP BY b.ma ORDER BY b.message_on Desc";
 

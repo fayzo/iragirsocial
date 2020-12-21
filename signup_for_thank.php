@@ -40,7 +40,7 @@ $variables = array (
     "{{password}}" => $password,
 );
 
-$message = file_get_contents('signup.html');
+$message = file_get_contents('signup.html',__DIR__);
 
 foreach ($variables as $key => $value) {
     # code...

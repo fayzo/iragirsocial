@@ -32,27 +32,6 @@ if (isset($_GET['username']) == true && empty($_GET['username']) == false) {
 
 else{
 
-//      if (isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.crowfund' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.fundraising' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.Unemployment' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.sale' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.blog' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.jobs0' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.events' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.movies' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.sports' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.news' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.entertainment' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.rwandaPhotos' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.Tembera' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.hotelbooking' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.house' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.car' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.food' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.domestic' ||
-//          isset($_SERVER['REQUEST_URI']) == '/Blog_nyarwanda_CMS/jojo.school' 
-//     ){
-//         # code...
         $username= $users->test_input('irangiro');
         $uprofileId= $home->usersNameId($username);
         $profileData= $home->userData($uprofileId['user_id']);
@@ -72,7 +51,7 @@ else{
             $user_id= $profileData['user_id'];
         }
 
-        $_SESSION['irangiro_key'] = 65;
+        $_SESSION['irangiro_key'] = 1;
 
         $user= $home->userData($user_id);
         

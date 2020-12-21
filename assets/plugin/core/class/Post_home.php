@@ -473,7 +473,7 @@ class Posts_home extends Gurisha {
                                                <span class="username">
                                                    <a style="float:left;padding-right:3px;" href="<?php echo BASE_URL_PUBLIC.$tweet['username'] ;?>"><?php echo $tweet['username'] ;?></a>
                                                    <!-- //Jonathan Burke Jr. -->
-                                                   <span class="description">Shared publicly - <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
+                                                   <span class="description" >Shared publicly - <?php echo $this->timeAgo($tweet['posted_on']); ?></span>
                                                </span>
                                                <span class="description"><?php echo $this->getTweetLink($tweet['status']); ?></span>
                                            </div>

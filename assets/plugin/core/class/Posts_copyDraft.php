@@ -3,20 +3,23 @@
        header('Location: ../../404.html');
  }
 
-class Posts_copyDraft extends  Gurisha {
+class Posts_copyDraft extends  Home {
 
     public function tweets($user_id,$limit)
     {
         $mysqli= $this->database;
         // $sql="SELECT * FROM tweets T LEFT JOIN users U ON T. tweetBy= U. user_id LEFT JOIN blog B ON B. tweet_blog_by = U. user_id WHERE T. tweetBy = $user_id AND T. retweet_id='0' AND B. blog_post = 'posted' OR T. tweetBy= U. user_id AND T. retweet_by != $user_id AND B. blog_post= 'posted' AND T. tweetBy IN (SELECT receiver FROM follow WHERE sender= $user_id) ORDER BY T. tweet_id DESC LIMIT $limit ";
-        $sql="SELECT * FROM tweets T LEFT JOIN users U ON T. tweetBy= U. user_id WHERE T. tweetBy = $user_id AND T. retweet_id='0' OR T. tweetBy= U. user_id AND T. retweet_by != $user_id AND T. tweetBy IN (SELECT receiver FROM follow WHERE sender= $user_id) ORDER BY T. tweet_id DESC LIMIT 0,5";
+        $sql="SELECT * FROM tweets T LEFT JOIN users U ON T. tweetBy= U. user_id WHERE T. tweetBy = $user_id AND T. retweet_id='0' OR T. tweetBy= U. user_id AND T. retweet_by != $user_id AND T. tweetBy IN (SELECT receiver FROM follow WHERE sender= $user_id) ORDER BY T. tweet_id DESC LIMIT $limit";
+        // var_dump('ERROR: Could not able to execute'. $query.mysqli_connect_error($mysqli));x
         $query= $mysqli->query($sql);
         $tweets=array();
+
         while ($row= $query->fetch_assoc()) {
             # code...
              $tweets[]= $row;
-        }
-         
+            }
+
+            
                         foreach ($tweets as $tweet) {
                                 $likes= $this->likes($user_id,$tweet['tweet_id']);
                                 $retweet= $this->checkRetweet($tweet['tweet_id'],$user_id);

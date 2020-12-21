@@ -15,16 +15,17 @@ if (isset($_POST['showpoptweet']) && !empty($_POST['showpoptweet'])) {
 
 <div class="tweet-show-popup-wrap">
     <input type="checkbox" id="tweet-show-popup-wrap">
-    <div class="wrap4">
-        <label for="tweet-show-popup-wrap">
-            <div class="tweet-show-popup-box-cut">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-        </label>
-        <div class="tweet-show-popup-box">
+      <div class="wrap6" id="disabler">
+        <span class="colose">
+        	<button class="close-imagePopup"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </span>
+        <div class="wrap6Pophide" onclick="togglePopup( )"></div>
+        <div class="img-popup-wrapLogin"  id="popupEnd">
+        	<div class="img-popup-body">
 
             <div class="card">
                 <div class="card-header">
+                     <button class="btn btn-success btn-sm  float-right d-md-block d-lg-none"  onclick="togglePopup ( )">close</button>
 
                     <div class="user-block">
                         <!-- <button class="f-btn btn btn-primary btn-sm float-right"><i class="fa fa-user-plus"></i> Follow</button> -->
@@ -726,6 +727,7 @@ if (isset($_POST['showpoptweet']) && !empty($_POST['showpoptweet'])) {
 
             </div><!-- card-End -->
         </div> <!-- Wrp4 -->
+    </div> <!-- tweet-show-popup-wrap" -->
     </div> <!-- tweet-show-popup-wrap" -->
 
     <?php }

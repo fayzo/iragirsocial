@@ -39,7 +39,7 @@ $(document).ready(function() {
                         $('.retweet-popup').hide();
                         $count++;
                         $counter.text($count++);
-                        $button.removeClass('.retweet').addClass('.retweeted');
+                        $button.removeClass('retweet').addClass('retweeted');
 
                         console.log(response);
                     }

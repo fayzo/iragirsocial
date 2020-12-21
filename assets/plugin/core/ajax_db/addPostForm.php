@@ -20,7 +20,7 @@ if (isset($_POST['key']) == 'textarea'){
 
 	    preg_match_all("/#+([a-zA-Z0-9_]+)/i",$status,$hashtag);
 		
-		 $tweet_id= $users->creates('Tweets',array(
+		 $tweet_id= $users->creates('tweets',array(
                         'status' => $status, 
                         'tweetBy' => $user_id, 
                         'posted_on' => date('Y-m-d H-i-s'),
@@ -70,7 +70,7 @@ if (isset($_POST['key']) == 'textarea'){
 		}
 		preg_match_all("/#+([a-zA-Z0-9_]+)/i",$status, $hashtag);
 		
-	 $tweet_id= $users->creates('Tweets',array(
+	 $tweet_id= $users->creates('tweets',array(
                         'status' => $status, 
                         'tweetBy' => $user_id, 
                         'tweet_image' => $tweetimages, 

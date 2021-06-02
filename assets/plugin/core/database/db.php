@@ -18,7 +18,8 @@ class Db
         $dbHost = "localhost";
         $dbUsername = "root";
         $dbPassword = "";
-        $dbName = "irangiro_social";
+        $dbName = "irangiro_social_site_no_job";
+        // $dbName = "irangiro_social_one";
         $dbport = "3306";
         // $conn = new mysqli( 'localhost','fayzo','fayzo123','retrieve_data','3306');
         $this->connection = new Mysqli($dbHost, $dbUsername, $dbPassword, $dbName,$dbport);
